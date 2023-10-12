@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+              background-image: url('https://www.allrecipes.com/thmb/iXKYAl17eIEnvhLtb4WxM7wKqTc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/240376-homemade-pepperoni-pizza-Beauty-3x4-1-6ae54059c23348b3b9a703b6a3067a44.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+        form{
+            width: 30%;
+            height: 90px;
+            margin-left: 400px;
+        }
+        fieldset{
+            margin: auto;
+            margin-top: 40px;
+            background-color: rgb(222, 237, 242);
+            border-radius: 10px;
+        }
+        fieldset:hover{
+            background-color: rgb(247, 240, 240);
+        }
+        #head{
+            background-color: rgb(138, 136, 32);
+            margin-right: 3x;
+            padding: 5px;
+            border: 2px solid grey;
+            border-radius: 10px;
+            /* width: 100%; */
+        }
+        legend{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow',
+Arial, sans-serif;
+            font-weight:700;        }
+        span{
+            font-size: x-small;
+        }
+        input{
+            width: 40%;
+            height: 20px;
+            margin: 5px;
+            border-radius: 7px;
+        }
+        .local{
+            width: 20%;
+            margin: 5px;
+        }
+        .size{
+            width: min-content;
+        }
+        #order{
+           height: 40px;
+           width: 100%;
+           background-color: rgb(77, 22, 2);
+           color: white;
+           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida
+Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #order:hover{
+            background-color: rgb(202, 132, 27);
+        }
+    </style>
+</head>
+<body>
+
+    <form>
+        <fieldset>
+            <div id="head">
+            <legend>WELCOME TO ITALIAN PIZZA</legend>
+
+        <span>We deliver pizza in 40 minutes max. If not - Pizza's on us!</span>
+    </div>
+        <br>
+        <label for="email">Email <br>
+            <input type="email" id="email" name="email">
+        </label> <br>
+        <label>Phone</label><br>
+        <input type="text" class="local" name="area">
+        <input type="number" class="local" name="local">
+        <input type="text" class="local" name="local"><br>
+
+        <label for="">Number of Slices</label><br>
+        <input type="text" id="slices" name="slices"><br>
+
+        <label for="">Pizza Size</label><br>
+        <input type="radio" name="size" id="size" class="size">8-inch
+        <input type="radio" name="size" id="size" class="size">10-inch
+        <input type="radio" name="size" id="size" class="size">12-inch
+        <input type="radio" name="size" id="size" class="size">14-inch
+        <br>
+        <label for="">Toppings</label><br>
+        <input type="checkbox" id="pep" name="pep" class="size">Pepperoni
+        <input type="checkbox" id="oni" name="oni" class="size" >Onions
+        <input type="checkbox" id="mus" name="mus" class="size">Mushrooms
+        <input type="checkbox" id="sau" name="sau" class="size">Sausage
+        <br>
+        <input type="checkbox" name="agree" id="agree" class="size">I
+agree to the TERMS AND CONDITIONS
+        <input type="submit" name="order" id="order" value="Order Now">
+    </fieldset>
+    </form>
+
+</body>
+</html>
+
+
+

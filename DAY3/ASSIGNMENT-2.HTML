@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       form{
+        width: 80%;
+       }
+        img{
+            width: 35px;
+            height: 35px;
+            border-radius: 10px;
+        }
+       fieldset{
+           border: 2px solid black;
+           width: 50%;
+           /* text-align: justify; */
+           /* float:left; */
+        }
+
+        form fieldset header{
+            width: 100%;
+            background-color: lightblue;
+            color: white;
+            height: 40px;
+
+            text-align: center;
+        }
+
+        form fieldset footer{
+            width: 100%;
+            height: 40px;
+
+            color: grey;
+            background-color: lightgray;
+        }
+
+        form input{
+            width: 100%;
+            height: 30px;
+            border-radius: 10px;
+            border: 1px solid grey;
+
+        }
+        #complete-transaction{
+             height: 40px;
+             width: 20%;
+             text-align: center;
+             padding: 5px;
+             margin: 10px;
+             color: white;
+             font-weight: 100;
+             background-color: orange;
+             border: none;
+             border-radius: 10px;
+        }
+
+        #card{
+            width: 3%;
+
+        }
+        span{
+
+        }
+    </style>
+</head>
+<body>
+        <form>
+            <fieldset>
+                <header>This is a secure 128-bit SSL Encrypted
+payment. You're safe.</header>
+                <br>
+                <input type="radio" id="card" name="card"><img
+src="https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/visa-512.png" alt="visa"><img src="data:image/png;base64,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" alt="mastercard">
+                <label for="card">Credit Card (Visa, Mastercard)</label>
+                <input type="radio" id="card" name="card"><img
+src="https://cdn-icons-png.flaticon.com/512/196/196566.png" alt="paypal"><label for="card">Paypal</label>
+
+            <br><br><br>
+            <label for="cNo">Card number : <span>enter your 16 digits card number</span></label>
+            <br>
+            <input type="text" id="cNo" name="cNo">
+            <br>
+            <label for="expDate">Expiration date</label>
+            <br>
+            <select name="mon" id="mon">
+                    <option>Month</option>
+                    <option value="jan">Januray</option>
+                    <option value="feb">February</option>
+                    <option value="mar">March</option>
+                    <option value="apr">April</option>
+                    <option value="may">May</option>
+                    <option value="jun">June</option>
+                    <option value="jul">July</option>
+                    <option value="aug">August</option>
+                    <option value="sep">September</option>
+                    <option value="oct">October</option>
+                    <option value="nov">November</option>
+                    <option value="dec">December</option>
+                </select>
+                /
+                <select name="year" id="year">
+                    <option>Year</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                    <option value="2025">2025</option>
+                    <option value="2026">2026</option>
+                    <option value="2027">2027</option>
+                    <option value="2028">2028</option>
+                    <option value="2029">2029</option>
+                    <option value="2030">2030</option>
+                    <option value="2031">2031</option>
+                    <option value="2032">2032</option>
+                </select>
+                <br><br>
+                <label for="cvv">CVV2/CVC2</label>
+                <input type="password" name="cvv" id="cvv" maxlength="3" >
+                <span>The last 3 digits displyed on the back of your card</span>
+                <br>
+                <label for="full-name">Full Name on a Card</label>
+                <br>
+                <input type="text" name="full-name" id="full-name">
+                <br>
+            <footer>
+                <span>You will be charged $29.00 every month</span>
+            </footer>
+            </fieldset>
+            <br>
+            <input type="submit" name="complete-transaction"
+id="complete-transaction" value="Complete Transaction">
+
+
+        </form>
+</body>
+</html>
