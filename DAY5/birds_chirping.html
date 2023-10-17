@@ -1,0 +1,138 @@
+<html>
+
+<head>
+	<style> 
+			.sound_box
+			{
+					border:  5px solid #764980;
+					background-color : #3f0a4a;
+					height:   100px;
+					width : 100px;
+					border-radius : 5px;
+					background:url('bird3.jpg');
+					background-size : 100px  100px;
+			}
+			
+			.sound_box:hover
+			{
+				border-color:  #a18da6;
+			}
+			
+			
+			.sound_box_ball
+			{
+				height :12px;
+				width : 12px;
+				border-radius :  50px;
+				background-color : #a18da6;				
+				margin-top:5px;
+				margin-left:10px;
+				box-shadow : 2px  2px   5px   #3f0a4a;
+			}
+			
+			.sound_box_ball:hover
+			{				 
+				background-color :  yellow;
+				box-shadow : 2px  2px   10px   yellow;
+			}
+			
+	  .soundboard__volume-input {
+        accent-color: pink;        
+        margin: 7px 0 0 0;        
+        transform: rotate(-90deg);
+        position: relative;
+        left: 70;
+        top: -70;
+        width :  100px;
+		color : black;
+        cursor: row-resize;
+    }
+ 
+
+  .soundboard__volume-input:before {
+        content: "+"; 
+		position : relative;
+		top :  4px;
+		left:   102px;
+    }
+
+
+.soundboard__volume-input:after 
+{
+        content: "I"; 
+		position : relative;
+		top :  3px;
+		left:   -102px;
+		 transform: rotate(-90deg);
+    }
+
+   
+ 
+			
+	
+	</style>
+
+</head>
+
+<body>
+
+
+	<div  id="div1"  class="sound_box"  onclick="applyStyle()">
+		<p  id="p1" class="sound_box_ball">&nbsp;</p>
+	</div>
+	
+ <audio id="audio1"  class="soundboard__audio"  loop>
+		<source  src="birds-loop.flac"   />
+ </audio>
+ 
+<input  style="display:none;" class="soundboard__volume-input"  id="range1"   onchange="updateVolume()"
+			type="range" min="0" max="1" step="0.1" value="0.5" list="steplist">
+
+<datalist id="steplist">
+    <option>0</option>
+    <option>0.1</option>
+    <option>0.2</option>
+    <option>0.3</option>
+    <option>0.4</option>
+    <option>0.5</option>
+    <option>0.6</option>
+    <option>0.7</option>
+    <option>0.8</option>
+    <option>0.9</option>
+    <option>1</option>
+</datalist>
+
+<script>
+
+	var togglePlay = false;
+
+	function  applyStyle()
+	{
+			if(togglePlay == false)
+			{
+					document.getElementById("audio1").play();
+					document.getElementById("p1").style.backgroundColor = "yellow";
+					document.getElementById("p1").style.boxShadow = "2px  2px   15px   purple";
+					togglePlay = true;
+					document.getElementById("range1").style.display = "block";
+			}
+			else
+			{
+					document.getElementById("audio1").pause();
+					togglePlay = false;
+					document.getElementById("p1").style.backgroundColor = "gray";
+					document.getElementById("p1").style.boxShadow = "2px  2px   5px   lightgray";
+					document.getElementById("range1").style.display = "none";
+			}		
+	}
+	
+	
+	function updateVolume()
+	{
+				document.getElementById("audio1").volume = 	document.getElementById("range1").value;
+	}
+</script>
+	 
+</body>
+
+</html>
