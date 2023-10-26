@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <style>
+            ul
+            {
+                list-style: none;
+            }
+
+            .pricing {
+            display: flex;
+            justify-content: space-between;
+            max-width: 960px;
+            margin: auto;
+            }
+           .pricing-plan {
+            box-shadow: 10px 10px 5px rgb(157, 158, 148);
+            flex: 1;
+            background-color: #f0e8e6;
+            margin: 15px 8px;
+            padding: 30px;
+            border-radius: 6px;
+            color: #fff;
+            box-shadow: #6cadea;
+            }
+            @media (max-width: 768px) {
+           .pricing {
+            display: block;
+           }
+           }
+          .pricing-plan h2 {
+           margin-top: 0;
+           padding-bottom: 10px;
+           border-bottom: 2px solid #955b6d;
+           text-transform: uppercase;
+           letter-spacing: 0.07em;
+           }
+           .pricing-plan p {
+            margin-top: 0;
+           }
+           .pricing-plan p span {
+            font-size: 33px;
+           }
+           .pricing-plan ul {
+            margin: 0 0 35px;
+            padding-left: 16px;
+            list-style: none;
+            line-height: 1.8;
+            color: #c2a9a9;
+            }
+            
+            .pricing-plan a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+           text-align: center;
+           background: #d1ec3b;
+           border: 2px solid #f4eaf4;
+           border-radius: 5px;
+           letter-spacing: 0.05em;
+           text-transform: uppercase;
+           font-size: 15px;
+           font-weight: bold;
+            }
+            .pricing-plan li
+            {
+            border-bottom:2px solid #f4c79a;
+            }
+           .pricing-plan a:hover {
+            background-color: #19d2db;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="pricing" style="text-align: center;">
+            <div class="pricing-plan" style="color: darkslategray;">
+              <h2>Basic</h2>
+              <p><span>₹10</span> / month</p>
+              <ul style="list-style: none;" >
+                <li>20 Gb storage</li><br>
+                <li>2 E-mail Accounts</li><br>
+                <li>24/7 Tech Support</li><br>
+                <li>300 GB Bandwidth</li><br>
+                <li>User Management</li><br>
+              </ul>
+              <a href="#">Buy Now</a>
+            </div>
+            <div class="pricing-plan" style="color: cadetblue;">
+              <h2>Premium</h2>
+              <p><span>₹20</span> / month</p>
+              <ul>
+                <li>32 Gb storage</li><br>
+                <li>3 E-mail Accounts</li><br>
+                <li>24/7 Tech Support</li><br>
+                <li>500 GB Bandwidth</li><br>
+                <li>User Management</li><br>
+              </ul>
+              <a href="#">Buy Now</a>
+            </div>      
+            <div class="pricing-plan" style="color: rgb(34, 188, 136);">
+              <h2>Enterprise</h2>
+              <p><span>₹30</span> / month</p>
+              <ul>
+                <li>64 Gb storage</li><br>
+                <li>4 E-mail Accounts</li><br>
+                <li>24/7 Tech Support</li><br>
+                <li>900 GB Bandwidth</li><br>
+                <li>User Management</li><br>
+              </ul>
+              <a href="#">Buy Now</a>
+            </div>
+          </div>
+    </body>
+</html>
