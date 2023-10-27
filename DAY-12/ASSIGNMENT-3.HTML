@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ques2</title>
+    <style>
+        body {
+              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY0Ztm-kDS4xet_GclBhhMN0IYY1PkJ8T1cXzByoVV6wqqgFYP8nzmpF90yFVIN8f8MZI&usqp=CAU');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+    </style>
+</head>
+<style>
+    form{
+        width: 350px;
+        border: 7px solid rgb(236, 153, 183);
+        margin-top: 100px;
+        margin-left: 400px;
+        box-shadow: 20px 20px 10px rgb(241, 242, 236);
+    }
+    fieldset{
+        border: none;
+    }
+    input{
+        margin: 10px;
+    }
+</style>
+<body>
+    <form action="">
+        <fieldset>
+            <label for="proName">
+                Product Name :
+            </label>
+            <input type="text" id="proName" name="proName"><br>
+            <label for="unitPrice">
+                Unit Price :
+            </label>
+            <input type="number" id="unitPrice" name="unitPrice"><br>
+            <label for="quant">
+                Quantity : </label>
+            <input type="number" id="quant" name="quant"><br>
+            <input type="button" id="total" name="total" value="Get Total" onclick="getTotal()"><br>
+            <p id="res"> </p>
+        </fieldset>
+    </form>
+</body>
+ 
+<script>
+    function getTotal()
+    {
+     var txtObj1 = document.getElementById("unitPrice")
+     var txtObj2 = document.getElementById("quant")
+     var total = txtObj1.value*txtObj2.value
+     var result = document.getElementById("res");
+ 
+     if(txtObj2.value > 30){
+        result.innerHTML = "Total Amount : "+total.toFixed(2)+"<br> You get 20% discount on your total &#128526" + "<br> Amount Payable : " +(total - 0.2*total).toFixed(2)+"&#128077";
+     }
+     else if(txtObj2 > 20){
+        result.innerHTML = "Total Amount : "+total.toFixed(2)+"<br> You get 20% discount on your total &#128526" + "<br> Amount Payable : " +(total - 0.15*total).toFixed(2)+"&#128077";
+     }
+     else if(txtObj2.value > 10){
+        result.innerHTML = "Total Amount : "+total.toFixed(2)+"<br> You get 20% discount on your total &#128526" + " <br>Amount Payable : " +(total - 0.1*total).toFixed(2)+"&#128077";
+     }
+     else{
+        result.innerHTML = "Total Amount : "+total.toFixed(2)+" <br>No discount applied &#128532";
+     }
+     
+     
+    }
+ 
+ 
+</script>
+ 
+</html>

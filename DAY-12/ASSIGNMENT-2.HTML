@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+              background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY0Ztm-kDS4xet_GclBhhMN0IYY1PkJ8T1cXzByoVV6wqqgFYP8nzmpF90yFVIN8f8MZI&usqp=CAU');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+    </style>
+</head>
+<body>
+    <form action="login.jsp" onsubmit="fun(event)" style="margin-left: 250px; margin-top: 100px; width: 550px;">
+        <fieldset style="height: 300px;">
+            <legend><i><b>User Login</b></i></legend>
+        <br><br>
+        <label for="uName"><i>User Name</i></label>
+        <input type="text" id="uName" name="uName">
+        <br><br><br>
+        <label for="pwd"><i>Password</i></label>
+        <input type="password" id="pwd" name="pwd">
+        <br><br><br>
+        <input type="submit" value="Login">
+        <br><br><br>
+        <span id="error"></span>
+       </fieldset>
+    </form>
+</body>
+ 
+     <script>
+         function fun(event)
+         {
+            var txtObj1 = document.getElementById('uName');
+        var txtObj2 = document.getElementById('pwd');
+ 
+        var eMsg = document.getElementById("error");
+        eMsg.innerHTML = "";
+ 
+        if(txtObj1.value == "admin" && txtObj2.value == "admin123")
+        {
+            eMsg.style.color = "green";
+            eMsg.innerHTML = "Welcome to My Page 🤗";
+            event.preventDefault();
+        }
+       
+        else
+        {
+            eMsg.style.color = "red";
+            eMsg.innerHTML = "Invalid user id or password ❌";
+            event.preventDefault();
+        }
+    }
+     </script>
+</html>
