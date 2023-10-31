@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Definitions</title>
+    <style>
+        body{
+            color: black;
+        }
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            color: black;
+           
+        }
+        .box{
+            width: 25%;
+            height: 280px;
+            box-shadow: 3px 3px 4px rgb(241, 213, 213);
+            border: 2px solid rgb(66, 54, 54);
+            margin-top: 40px;
+            padding-top: 30px;
+            text-align: center;
+            border-radius: 10px;
+        }
+ 
+        input{
+            height: 50px;
+            width: 70%;
+            border: 2px solid rgb(118, 58, 58);
+            border-radius: 10px;
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: 600;
+            color: rgb(119, 64, 64);
+        }
+        span{
+            font-size: medium;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-weight: 600;
+            color: rgb(230, 214, 214);
+            font-size: xx-large;
+        }
+        button{
+            height: 40px;
+            width: 50%;
+            background-color: rgb(224, 144, 137);
+            color: rgb(25, 19, 19);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: medium;
+            border-radius: 10px;
+            border: none;
+           
+ 
+        }
+ 
+    </style>
+</head>
+<body style="background-color: black;">
+    <div class="container">
+       <div class="box">
+        <button onclick="fun1()" >Know even numbers</button>
+        <br><br>
+        <span id="even"></span>
+       </div>
+ 
+       <div class="box">
+         <input type="number" id="num1" name="num1" placeholder="Enter base">
+         <br><br>
+         <input type="number" id="num2" name="num2" placeholder="Enter power">
+         <br><br>
+         <button onclick="fun2()">Result</button>
+         <br><br>
+         <span id="result"></span>  
+       </div>
+ 
+       <div class="box">
+          <input type="text" id="txt1" name="txt1" placeholder="Enter a string">
+          <br><br>
+          <button onclick="fun3()">Count of words</button>
+          <br><br>
+          <span id="cw"></span>
+       </div>
+    </div>
+</body>
+    <script>
+        function fun1(){
+            var arr = [5,9,34,23,10,42,77];
+            var sp1Obj = document.getElementById('even');
+            var str = "";
+            for(var i of arr){
+                if(i%2 == 0){
+                    str += `${i} <br>`;
+                }
+            }
+            sp1Obj.innerHTML = str;
+        }
+ 
+        function fun2(){
+ 
+            var base = document.getElementById('num1');
+            var pow = document.getElementById('num2');
+            var pro = 1;
+            for(let i = 1; i <= parseInt(pow.value); i++){
+                pro *= parseInt(base.value);
+            }
+            var res = document.getElementById('result');
+ 
+            res.innerHTML = pro;
+        }
+ 
+        function fun3(){
+            var str = document.getElementById('txt1').value;
+            var count = document.getElementById('cw');
+            if(str == ""){
+                count.innerHTML = 0;
+            }
+            else
+            {
+                var counter = 1;
+            for(let i = 0; i < str.length; i++){
+                if(str.charAt(i) == " "){
+                    counter++;
+                    continue;
+                }
+            }
+           
+            count.innerHTML = counter;
+            }
+        }
+    </script>
+    </html>

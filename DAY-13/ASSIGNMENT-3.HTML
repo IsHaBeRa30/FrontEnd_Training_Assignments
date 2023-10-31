@@ -1,0 +1,74 @@
+<html>
+<head>
+    <style>
+        div
+        {
+            border:2px solid rgb(93, 43, 5);
+      background-color: rgb(208, 132, 85);
+            color : rgb(247, 247, 249);
+            font-size: 20px;
+            height:  100px;
+            padding : 10px;
+        }
+    </style>
+</head>
+<body>
+<h3 style="text-align: center; color: chocolate;">Array of Objects</h3>
+<hr/><hr/>
+<input type="button" style="margin: 10px;"  value="Initializer" onclick="f1()"  />
+<input type="button" style="margin: 10px;" value="Empty" onclick="f2()"  />
+<input type="button" style="margin: 10px;" value="Constructor" onclick="f3()"  />
+<br></br>
+ 
+<div id="div1"> </div>
+ 
+<script>
+ 
+var divObj = document.getElementById("div1");
+ 
+ function   f1()
+ {      
+        // Initializer
+        var employee = {empno: 101,ename: "DISHA",job: "Manager",sal: 60000,
+      deptno: 10};    
+        var str  = `empno : ${employee.empno} , eName : ${employee.ename} , job: ${employee.job} , sal: ${employee.sal} , deptno : ${employee.deptno}`;
+        divObj.innerHTML  = str;
+}  
+ 
+function   f2()
+ {      
+    // Empty
+  var  employee= {};
+    employee.empno=102;
+  employee.ename= "TISHA";
+  employee.job="Assistant";
+  employee.sal= 80000;
+  employee.deptno=20;      
+     
+    var str  = `empno : ${employee.empno} , eName : ${employee.ename} , job: ${employee.job} , sal: ${employee.sal} , deptno : ${employee.deptno}`;
+    divObj.innerHTML  = str;
+}
+ 
+ 
+ 
+function  employee()
+{ // Constructor
+    this.empno =103;
+    this.ename="NISHA";
+    this.job="Director";
+    this.sal= 180000;
+    this.deptno=30;      
+ 
+}
+ 
+function   f3()
+ {      
+    var  e =  new employee();            
+    var str  = `empno : ${e.empno} , eName : ${e.ename} ,job: ${e.job} , sal: ${e.sal} , deptno : ${e.deptno}`;
+    divObj.innerHTML  = str;
+}  
+ 
+ 
+</script>
+</body>
+</html>

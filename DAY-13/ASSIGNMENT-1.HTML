@@ -1,0 +1,31 @@
+<html>
+	<head></head>
+	<body>
+		<h2>Operations on Arrays </h2>
+		<hr/>
+		
+		<input type="button"  value="show Data"  onclick="fn_createTable()"  />
+        <br><br>
+		<table id="table1" border="2" width="300">
+        </table>
+		
+		
+		
+	</body>
+    <script>	
+        function   fn_createTable()
+       {
+        var arr =["HTML5","CSS3","jQUERY","AngularJS,Bootstrap"]
+        var tableObj = document.getElementById("table1");
+        var str ="";
+        
+        for (let i in arr)
+        {
+            var n = parseInt(i) + 1;
+            // str = str + `<tr><td> ${n} </td><td> ${dataArray[i]} </td></tr>
+           str += "<tr><td>"+n +"</td>"+"<td>"+arr[i]+"</td></tr>"
+        }
+        tableObj.innerHTML = str;
+       }
+    </script>
+</html>
