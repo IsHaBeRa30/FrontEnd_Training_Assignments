@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <div id="master"></div>
+</body>
+ <script>
+    var paraObj= document.createElement("p");
+    paraObj.setAttribute("id","p1");
+    paraObj.setAttribute("align","center");
+    paraObj.style.color="brown";
+    paraObj.innerText="HELLO DELOITTEIS !🤍";
+
+    var divObj=document.getElementById("master");
+    divObj.appendChild(paraObj);
+
+    var imgObj=document.createElement('img');
+    imgObj.setAttribute("id","img1");
+    imgObj.setAttribute("width","75%");
+    imgObj.setAttribute("height","75%");
+    imgObj.setAttribute("style","border-radius:100%; box-shadow:10px 10px 5px black; margin-left:150px");
+    imgObj.setAttribute("src","Group Picture Tower 1 3rd Floor.png");
+    divObj.appendChild(imgObj);
+ </script>
+</html>
