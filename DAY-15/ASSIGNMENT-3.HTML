@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Promise</title>
+    <style>
+       body{
+        background-color: black;
+       }
+    </style>
+    </head>
+   
+<body>
+    <h1 style="text-align: center; color: aquamarine;">Display Random Number</h1>
+    <center><button onclick="DisplayNumber()">Get Number</button></center>
+    <p id="number"></p>
+</body>
+<script>
+    function generateNumber()
+     {
+        return new Promise((resolve,reject)=>
+         {
+            var randomNumber = Math.floor(Math.random() * 50) + 1;
+            // resolve(randomNumber);
+           
+            if (randomNumber % 5 === 0) {
+                resolve(randomNumber);
+            } else {
+                reject("error ="+randomNumber);
+            };
+        });
+    }
+    function DisplayNumber() {
+        generateNumber()
+            .then(number =>
+            {
+                document.getElementById("number").innerHTML = `"<p style='color:aquamarine' text-align:'center'>Random number is: ${number}</p>"`;
+             }) .catch(error =>
+                { document.getElementById('number').innerHTML = `"<p style='color:aquamarine'> Not a multiple is: ${error}</p>"`;
+ 
+            });
+    }
+</script>
+</html>
