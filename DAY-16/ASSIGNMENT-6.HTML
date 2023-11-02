@@ -1,0 +1,25 @@
+<html>
+    <head>
+ 
+    </head>
+    <body>
+    <center>
+        <img id="img1" height="100%" width="50%">
+    </center>
+       
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script>
+ 
+var images=["https://i.pinimg.com/474x/ed/d4/69/edd4696a54442b720302a10471b1df0a.jpg", "https://i.pinimg.com/474x/00/e9/f5/00e9f5b9c82197564e98a27a919029df.jpg","https://i.pinimg.com/474x/ac/5e/bf/ac5ebfd107c46229cfe6c59012465880.jpg","https://i.pinimg.com/474x/38/f4/13/38f413ea1b0c246d123d3d55d6d860f9.jpg"];
+           
+         $(document).ready(function()
+             {setInterval(function(){
+            var x = Math.floor((Math.random() * images.length));
+       
+         $("#img1").attr("src",images[x])} ,2000);              
+});
+     
+       
+        </script>
+    </body>
+</html>
